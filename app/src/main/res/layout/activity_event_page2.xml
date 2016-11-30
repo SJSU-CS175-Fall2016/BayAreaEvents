@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EventListPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/nearEvent"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="43dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail1"
+        android:layout_above="@+id/cAvail2"
+        android:layout_alignParentEnd="true"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail2"
+        android:layout_above="@+id/cAvail3"
+        android:layout_alignStart="@+id/cAvail3"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail3"
+        android:layout_above="@+id/cAvail4"
+        android:layout_alignStart="@+id/cAvail4"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail4"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail5"
+        android:layout_below="@+id/cAvail4"
+        android:layout_alignParentEnd="true"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail6"
+        android:layout_below="@+id/cAvail5"
+        android:layout_alignParentEnd="true"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Availability"
+        android:id="@+id/cAvail7"
+        android:layout_below="@+id/cAvail6"
+        android:layout_alignParentEnd="true"
+        android:width="120dp"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/cAvail1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView6"
+        android:layout_above="@+id/cAvail3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView7"
+        android:layout_alignBottom="@+id/cAvail3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView8"
+        android:layout_above="@+id/cAvail5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView9"
+        android:layout_above="@+id/cAvail6"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView10"
+        android:layout_above="@+id/cAvail7"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Filler"
+        android:id="@+id/textView11"
+        android:layout_alignBottom="@+id/cAvail7"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BaeAreaEvents</string>
+    <string name="Location">Location: </string>
+    <string name="cLocation">Choose Location</string>
+    <string name="Event">Event: </string>
+    <string name="cEvent">Choose Event</string>
+    <string name="Date">Date: </string>
+    <string name="cDate">Choose Date</string>
+    <string name="Search">Search</string>
+    <string name="Browse">Browse All Events</string>
+    <string name="title_activity_event_page">EventPage</string>
+    <string name="nearEvent">Events near: </string>
+    <string name="Availability">Check Availability</string>
+    <string name="Filler">Filler Text</string>
+    <string name="View">View Now</string>
+    <string name="ticketText">Tickets (un)available!</string>
+</resources>
