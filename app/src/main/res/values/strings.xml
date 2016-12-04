@@ -14,4 +14,16 @@
     <string name="Filler">Filler Text</string>
     <string name="View">View Now</string>
     <string name="ticketText">Tickets (un)available!</string>
+
+    //pre poluated array
+    <string-array name="Location">
+        <item>San Francisco</item>
+        <item>Oakland</item>
+        <item>San Jose</item>
+        <item>Palo Alto</item>
+        <item>Sunnyvale</item>
+        <item>Berkeley</item>
+        <item>Mountain View</item>
+        <item>Santa Cruz</item>
+    </string-array>
 </resources>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bayarea4"
     tools:context=".EventPage">
 
     <TextView
@@ -25,63 +26,19 @@
         android:text="@string/Filler"
         android:id="@+id/textView13"
         android:layout_below="@+id/textView12"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Filler"
-        android:id="@+id/textView14"
-        android:layout_below="@+id/textView13"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Filler"
-        android:id="@+id/textView15"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/textView14"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Filler"
-        android:id="@+id/textView16"
-        android:layout_below="@+id/textView15"
-        android:layout_alignStart="@+id/textView15" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Filler"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView16"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Filler"
-        android:id="@+id/textView18"
-        android:layout_below="@+id/textView17"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginRight="23dp"
+        android:layout_alignBottom="@+id/viewButton"
+        android:layout_alignEnd="@+id/viewButton" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+        android:src="@android:drawable/ic_menu_myplaces"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/textView16"
-        android:layout_alignTop="@+id/textView15"
-        android:layout_alignBottom="@+id/textView18"
-        android:src="@android:drawable/ic_menu_myplaces" />
+        android:layout_toStartOf="@+id/textView13"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_below="@+id/textView12" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -89,8 +46,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/ticketText"
         android:id="@+id/textView19"
-        android:layout_marginTop="97dp"
-        android:layout_below="@+id/imageView"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/viewButton" />
 
@@ -101,5 +57,22 @@
         android:id="@+id/viewButton"
         android:width="190dp"
         android:layout_alignTop="@+id/textView19"
-        android:layout_alignEnd="@+id/textView18" />
+        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/mapFrame"
+        android:layout_alignParentEnd="true">
+
+        <fragment
+            android:id ="@+id/maps"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="376dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
 </RelativeLayout>

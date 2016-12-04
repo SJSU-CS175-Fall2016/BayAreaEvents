@@ -7,86 +7,114 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bayarea1"
+    style="?android:attr/borderlessButtonStyle"
     tools:context=".HomePage">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Location"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/locationButton"
-        android:layout_marginTop="71dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_gravity="right|center">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cLocation"
-        android:id="@+id/locationButton"
-        android:clickable="true"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Location"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Event"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/locationButton"
-        android:layout_alignStart="@+id/locationButton" />
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:id="@+id/locationspinner"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cEvent"
-        android:id="@+id/eventButton"
-        android:clickable="true"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/locationButton"
-        android:layout_alignEnd="@+id/locationButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Event"
+            android:id="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Date"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/eventButton"
-        android:layout_alignStart="@+id/dateButton" />
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:id="@+id/eventSpinner"
+            android:spinnerMode="dropdown"
+            android:layout_alignStart="@+id/searchButton"
+            android:layout_above="@+id/textView2"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cDate"
-        android:id="@+id/dateButton"
-        android:clickable="true"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/eventButton"
-        android:layout_alignEnd="@+id/eventButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Date"
+            android:id="@+id/textView3"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_above="@+id/eventSpinner"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Search"
-        android:id="@+id/searchButton"
-        android:layout_below="@+id/dateButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:height="50dp"
-        android:width="200dp"
-        android:clickable="true" />
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:id="@+id/dateSpinner"
+            android:spinnerMode="dropdown"
+            android:layout_above="@+id/textView3"
+            android:layout_alignStart="@+id/locationspinner"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Browse"
-        android:id="@+id/browseButton"
-        android:width="200dp"
-        android:height="50dp"
-        android:layout_below="@+id/searchButton"
-        android:layout_alignStart="@+id/searchButton"
-        android:clickable="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/Search"
+            android:id="@+id/searchButton"
+            android:width="200dp"
+            android:height="50dp"
+            android:clickable="true"
+            android:layout_alignStart="@+id/searchButton"
+            android:layout_weight="0.02"
+            android:layout_marginTop="75dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Browse"
+            android:id="@+id/browseButton"
+            android:height="50dp"
+            android:width="200dp"
+            android:clickable="true"
+            android:layout_below="@+id/textView2"
+            android:layout_alignStart="@+id/dateSpinner"
+            android:layout_marginBottom="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
 
 </RelativeLayout>
