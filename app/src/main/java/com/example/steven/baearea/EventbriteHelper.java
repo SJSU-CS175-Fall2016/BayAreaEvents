@@ -28,7 +28,7 @@ public class EventbriteHelper {
     // specific event will be replaced in the "id"
     //search event
     //private static final String EventURL ="https://www.eventbriteapi.com/v3/events/search/?q=q&token=EHX6AHAT3A5NVBCLVKSA";
-    private static final String EventURL ="https://www.eventbriteapi.com/v3/events/search/?q";
+    private static final String EventURL = "https://www.eventbriteapi.com/v3/events/search/?q";
     
    // private static final String DateURL = "https://www.eventbriteapi.com/v3/events/search/start_date/?5GWBURM7CJDIIMTMVV";
 
@@ -75,7 +75,7 @@ public class EventbriteHelper {
             StatusLine status = response.getStatusLine();
             if (status.getStatusCode() != HTTP_STATUS_OK) {
                 // handle error here
-                throw new ApiException("Invalid response from last.fm" +
+                throw new ApiException("Invalid response" +
                         status.toString());
             }
 

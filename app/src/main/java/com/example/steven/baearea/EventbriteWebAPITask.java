@@ -61,8 +61,8 @@ public class EventbriteWebAPITask extends AsyncTask<String,Integer,String> {
         try {
             {
                 JSONObject respObj = new JSONObject(result);
-                JSONObject EventsObj = respObj.getJSONObject("event");
-                JSONArray events = EventsObj.getJSONArray("events");
+                //JSONObject EventsObj = respObj.getJSONObject("events");
+                JSONArray events = respObj.getJSONArray("events");
 
                 for (int i=0; i<events.length();i++) {
                     JSONObject event = events.getJSONObject(i);
