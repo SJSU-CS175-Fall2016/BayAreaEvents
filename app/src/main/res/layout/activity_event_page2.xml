@@ -16,9 +16,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/nearEvent"
         android:id="@+id/textView4"
+        android:layout_gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="43dp" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/Filler"
         android:id="@+id/textView5"
-        android:layout_alignBottom="@+id/cAvail1"
+        android:layout_alignTop="@+id/checkAvail"
         android:layout_alignParentStart="true" />
 
     <TextView

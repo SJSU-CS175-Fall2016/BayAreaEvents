@@ -28,7 +28,7 @@
         android:layout_below="@+id/textView12"
         android:layout_marginRight="23dp"
         android:layout_alignBottom="@+id/viewButton"
-        android:layout_alignEnd="@+id/viewButton" />
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="wrap_content"

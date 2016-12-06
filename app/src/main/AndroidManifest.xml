@@ -9,12 +9,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+
+
         // Google Maps API
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB0CZsbNdoPO9DEizYXVxTXYxZRffAaAMo"
             />
-        <activity android:name=".HomePage">
+
+
+
+        <activity android:name=".EventsListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +29,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".EventListPage" />
 
-        <activity android:name=".EventPage"></activity>
+
+
+
+
+
     </application>
 
 </manifest>

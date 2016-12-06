@@ -4,6 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     apply plugin: 'com.android.application'
+    useLibrary 'org.apache.http.legacy'
 
 
     defaultConfig {
@@ -30,6 +31,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.android.support:design:24.2.0'
     compile 'com.google.android.gms:play-services-maps:10.0.1'
+
+
+
 
 
 

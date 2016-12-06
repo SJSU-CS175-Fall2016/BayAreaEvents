@@ -13,10 +13,11 @@ import android.widget.Spinner;
 
 public class HomePage extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
         // Location button
         Button browseButton = (Button) findViewById(R.id.browseButton);
@@ -52,5 +53,8 @@ public class HomePage extends AppCompatActivity {
         locationSpinner.setAdapter(adapter);
 
     }
+
+
 }
+
 

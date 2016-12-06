@@ -1,4 +1,6 @@
 <resources>
+
+
     <string name="app_name">BaeAreaEvents</string>
     <string name="Location">Location: </string>
     <string name="cLocation">Choose Location</string>
@@ -14,16 +16,18 @@
     <string name="Filler">Filler Text</string>
     <string name="View">View Now</string>
     <string name="ticketText">Tickets (un)available!</string>
+    <string name="searching_for_events">\"Searching Events\"</string>
+    <string name="no_events">Unable to find events</string>
 
     //pre poluated array
     <string-array name="Location">
-        <item>San Francisco</item>
+        <item>San-Francisco</item>
         <item>Oakland</item>
-        <item>San Jose</item>
-        <item>Palo Alto</item>
+        <item>San-Jose</item>
+        <item>Palo-Alto</item>
         <item>Sunnyvale</item>
         <item>Berkeley</item>
-        <item>Mountain View</item>
-        <item>Santa Cruz</item>
+        <item>Mountain-View</item>
+        <item>Santa-Cruz</item>
     </string-array>
 </resources>
