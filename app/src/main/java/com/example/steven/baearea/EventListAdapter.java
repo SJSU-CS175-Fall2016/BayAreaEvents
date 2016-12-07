@@ -27,13 +27,12 @@ public class EventListAdapter extends BaseAdapter implements View.OnClickListene
 
 
 
-    public EventListAdapter(EventsListActivity eventsListActivity, EventbriteIconTask imgFetcher,
-                            ArrayList<EventData> events, LayoutInflater layoutInflator) {
+    public EventListAdapter(EventsListActivity a, EventbriteIconTask i,LayoutInflater l, ArrayList<EventData> data) {
 
-        this.activity = eventsListActivity;
-        this.imgFetcher=imgFetcher;
-        this.layoutInflater = layoutInflator;
-        this.events=events;
+        this.activity = a;
+        this.imgFetcher=i;
+        this.layoutInflater = l;
+        this.events = data;
 
     }
 

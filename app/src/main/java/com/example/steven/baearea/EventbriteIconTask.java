@@ -55,6 +55,7 @@ public class EventbriteIconTask {
 
             s_url = params[0];
             InputStream istr;
+
             try {
                 Log.d(debugTag, "Fetching: " + s_url);
                 URL url = new URL(s_url);
@@ -68,7 +69,7 @@ public class EventbriteIconTask {
                 throw new RuntimeException(e);
 
             }
-
+            System.out.println("hello");
             return Drawable.createFromStream(istr,"src");
         }
 
