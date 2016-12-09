@@ -31,6 +31,7 @@ public class EventbriteIconTask {
     private static Drawable DEFAULT_ICON = null;
     private BaseAdapter adapt;
 
+
     public Drawable loadImage(BaseAdapter adapt, ImageView view) {
         this.adapt = adapt;
         String url = (String) view.getTag();

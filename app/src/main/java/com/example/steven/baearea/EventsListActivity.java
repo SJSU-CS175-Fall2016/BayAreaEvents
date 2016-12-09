@@ -7,6 +7,7 @@ import org.json.JSONArray;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -30,8 +32,8 @@ import java.util.List;
 public class EventsListActivity extends Activity {
 
     private ArrayList<EventData> events;
-    //private ListView eventsList;
-    private AdapterView eventsList;
+    private ListView eventsList;
+    //private AdapterView eventsList;
     private Spinner locationSpinner;
     private LayoutInflater layoutInflator;
     private Button searchButton;
@@ -43,11 +45,11 @@ public class EventsListActivity extends Activity {
 
         setContentView(R.layout.eventsactivity);
 
-       // this.inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        // this.inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         this.locationSpinner = (Spinner) findViewById(R.id.location_spinner);
         this.searchButton= (Button) findViewById(R.id.search_button);
-        this.imgFetcher =new EventbriteIconTask(); // add (this)
-        this.layoutInflator =LayoutInflater.from(this);
+        this.imgFetcher = new EventbriteIconTask(); // add (this)
+        this.layoutInflator =  LayoutInflater.from(this);
         this.eventsList = (ListView) findViewById(R.id.event_list);
 
 
@@ -62,6 +64,8 @@ public class EventsListActivity extends Activity {
                     TextView txtView  =  (TextView)locationSpinner.getSelectedView();
                     String metroTxt = txtView.getText().toString();
                     evtTask.execute(metroTxt);
+//                    Intent i = new Intent(EventsListActivity.this, EventListAdapter.class);
+//                    startActivity(i);
                 }
                 catch (Exception e)
                 {
@@ -108,7 +112,8 @@ public class EventsListActivity extends Activity {
         System.out.println("6");
         //saves the event array as local obj
         this.events = events;
-        this.eventsList.setAdapter(new EventListAdapter (this,this.imgFetcher,this.layoutInflator, this.events));
+        this.eventsList.setAdapter(new EventListAdapter (this, this.imgFetcher,this.layoutInflator, this.events));
+
 
         System.out.println(eventsList);
         System.out.println("7");

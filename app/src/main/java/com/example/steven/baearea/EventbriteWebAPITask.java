@@ -39,10 +39,10 @@ public class EventbriteWebAPITask extends AsyncTask<String,Integer,String> {
 
     @Override
     // will be called from a worker thread
-    protected String doInBackground(String... searchString) {
+    protected String doInBackground(String... params) {
         try {
             Log.d(debugTag, "Background:" + Thread.currentThread().getName());
-            String result = EventbriteHelper.downloadFromServer(searchString);
+            String result = EventbriteHelper.downloadFromServer(params);
             return result;
         } catch (Exception e) {
             return new String();
@@ -57,7 +57,8 @@ public class EventbriteWebAPITask extends AsyncTask<String,Integer,String> {
         progDialog.dismiss();
         if (result.length() == 0) {
             //if there are no events to display
-            System.out.println("unable to find an events, Please try again later");
+//            System.out.println("unable to find an events, Please try again later");
+            this.activity.alert("unable to find events, Please try again later");
             return;
         }
 
@@ -96,6 +97,7 @@ public class EventbriteWebAPITask extends AsyncTask<String,Integer,String> {
             e.printStackTrace();
         }
         System.out.println("5");
+
         this.activity.setEvents(eventdata);
     }
 }

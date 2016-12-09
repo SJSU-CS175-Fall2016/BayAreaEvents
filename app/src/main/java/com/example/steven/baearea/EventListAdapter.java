@@ -1,5 +1,6 @@
 package com.example.steven.baearea;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -96,8 +97,8 @@ public class EventListAdapter extends BaseAdapter implements View.OnClickListene
     @Override
     public void onClick(View v) {
         EventsListActivity.MyViewHolder holder = (EventsListActivity.MyViewHolder) v.getTag();
-        if (v instanceof Button) {
 
+        if (v instanceof Button) {
             Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                     Uri.parse(holder.event.getEventURL()));
             this.activity.startActivity(intent);
@@ -106,7 +107,12 @@ public class EventListAdapter extends BaseAdapter implements View.OnClickListene
             Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                     Uri.parse(holder.event.getEventDate()));
             this.activity.startActivity(intent);
+
+        } else if (v instanceof View) {
+            Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(holder.event.getEventName()));
+            this.activity.startActivity(intent);
         }
+
         Log.d(debugTag,"OnClick pressed.");
 
     }
