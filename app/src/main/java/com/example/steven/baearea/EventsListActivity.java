@@ -4,11 +4,13 @@ import android.app.Activity;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -22,6 +24,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Context;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,11 +44,17 @@ public class EventsListActivity extends Activity {
     private Button searchButton;
     private EventbriteIconTask imgFetcher;
     private InputMethodManager inMgr;
+    private DatabaseReference mDatabase;
+    private Button mSaveButton;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.eventsactivity);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mSaveButton = (Button) findViewById(R.id.saveButton);
+
 
         // this.inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         this.locationSpinner = (Spinner) findViewById(R.id.location_spinner);
@@ -73,6 +84,21 @@ public class EventsListActivity extends Activity {
                     alert (getResources().getString(R.string.no_events));
                 }
 
+            }
+        });
+
+        this.mSaveButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                try{
+                    //String eventName = JSONObject.getString("name");
+                    mDatabase.child("Eventname").setValue("1");
+                }
+                catch (Exception e)
+                {
+                    alert("Unable to save");
+                }
             }
         });
 
