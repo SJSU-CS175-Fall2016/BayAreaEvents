@@ -1,12 +1,8 @@
 README
 
-EventBrite API Details/Tokens
+Android Application that uses Eventbrite API to retrieve events in the bay area. 
+(If possible, test on android device - HTTP JSON request has been glitchy, however, there should be events pulled from Eventbrite. 
 
-Client secret
-D4WZLEW7TWXTFVMQJW4WHKBII3HKZOYLLDECNNY3HT2ILRE3U3
-Your personal OAuth token
-F64FOGCEGTBWSUACGVW5
-Anonymous access OAuth token
-OKXEAOU6XHGWAMJV6GRL
-
-http://idratherbewriting.com/docapis_eventbrite_example/
+Group Members: 
+   Joan Sirma
+   Steven Nguyen 
